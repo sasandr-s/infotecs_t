@@ -1,0 +1,25 @@
+@MeasurementDataApi_HostAddress = http://localhost:5200
+
+### Method 1: Upload File
+# Needs a file to be attached, usually tools like VS/VS Code handle multipart/form-data for .http files if referenced, 
+# or use curl/Postman. 
+# Here is a placeholder for the request structure.
+POST {{MeasurementDataApi_HostAddress}}/api/Timescale/upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="test.csv"
+Content-Type: text/csv
+
+Date;ExecutionTime;Value
+2023-10-27T10-00-00.0000Z;10.5;100.0
+2023-10-27T10-00-10.0000Z;15.2;150.0
+--boundary--
+
+### Method 2: Get Results
+GET {{MeasurementDataApi_HostAddress}}/api/Timescale/results?fileName=test.csv
+Accept: application/json
+
+### Method 3: Get Last 10 Values
+GET {{MeasurementDataApi_HostAddress}}/api/Timescale/values/last10?fileName=test.csv
+Accept: application/json

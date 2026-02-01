@@ -1,0 +1,14 @@
+# .gitignore for .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local settings
+appsettings.Development.json
+test_output.txt
+
