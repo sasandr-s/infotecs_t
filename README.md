@@ -20,16 +20,22 @@
 - PostgreSQL
 - Swagger
 
+### Структура проекта
+1. MeasurementDataApi - приложение
+2. MeasurementDataApi.Tests - тесты
+
 ### Настройка
 1. Склонируйте репозиторий.
-2. Настройте строку подключения в `appsettings.json` (секция `DefaultConnection`).
-3. Запустите проект:
+2. Открыть MeasurementDataApi.
+3. Настройте строку подключения в `appsettings.json` (секция `DefaultConnection`).
+4. Запустите проект:
    ```bash
    dotnet run
    ```
 
 
 ## Тестирование
+Для тестирования открыть папку MeasurementDataApi.Tests.
 Для запуска тестов используйте команду:
 ```bash
 dotnet test
